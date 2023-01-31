@@ -6,27 +6,27 @@
 ## ---------- This script is to inventory a Linux CentOS Stream 9 Server -----------------
 # Checking the OS version
 
-echo " The OS version is $(cat /etc/*release | grep PRETTY_NAME | awk -F = '{print $2}')"
+echo "The OS version is $(cat /etc/*release | grep PRETTY_NAME | awk -F = '{print $2}')"
 
 # Checking the memory size
 
-echo " The memory size is $(free -mh |grep Mem: |awk '{print $2}')"
+echo "The memory size is $(free -mh |grep Mem: |awk '{print $2}')"
 
 # Checking the hard drive
 
-echo " The hard drive is $(lsblk |grep sda)"
+echo "The hard drive is $(lsblk |grep sda)"
 
 # Checking the CPU speed
 
-echo " The CPU speed is $(lscpu |grep .Hz)"
+echo "The CPU speed is $(lscpu |grep .Hz)"
 
 # Checking the kernel version
 
-echo " The kernel version is $(uname -r |awk -F"x" '{print $1}')"
+echo "The kernel version is $(uname -r |awk -F"x" '{print $1}')"
 
 # Checking if the system is 32 or 64 bits
 
-echo " The system is $(getconf LONG_BIT) bits"
+echo "The system is $(getconf LONG_BIT) bits"
 
 # Checking the server's hostname
 
